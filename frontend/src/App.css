@@ -241,16 +241,35 @@
 
 /* Cards */
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: rgba(10, 10, 26, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.1);
   border-radius: 16px;
   padding: 32px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .card:hover {
   border-color: rgba(0, 184, 212, 0.3);
+  box-shadow: 0 0 30px rgba(0, 184, 212, 0.1);
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card-glass {
