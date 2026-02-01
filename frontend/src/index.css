@@ -5,14 +5,15 @@
 }
 
 :root {
-  --bg: #050505;
-  --surface: #0A0A0A;
-  --surface-highlight: #121212;
+  --bg: #030014;
+  --surface: #0a0a1a;
+  --surface-highlight: #12122a;
   --primary: #00B8D4;
   --primary-glow: rgba(0, 184, 212, 0.5);
   --secondary: #94A3B8;
   --accent: #00E5FF;
-  --border: rgba(255, 255, 255, 0.1);
+  --purple-glow: rgba(139, 92, 246, 0.3);
+  --border: rgba(255, 255, 255, 0.08);
   --text-primary: #FFFFFF;
   --text-secondary: #A1A1AA;
 }
@@ -27,6 +28,11 @@ body {
   color: var(--text-primary);
   overflow-x: hidden;
   line-height: 1.6;
+  background-image: 
+    radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(0, 184, 212, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(30, 20, 60, 0.5) 0%, transparent 70%);
+  background-attachment: fixed;
 }
 
 ::selection {
