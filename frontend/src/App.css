@@ -643,7 +643,20 @@
 .footer {
   padding: 80px 0 40px;
   border-top: 1px solid var(--border);
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .footer-grid {
