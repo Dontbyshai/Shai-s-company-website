@@ -457,6 +457,31 @@
   }
 }
 
+/* 5-card grid for AI section */
+.ai-grid-5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .ai-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ai-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .ai-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 /* Education Section */
 .education-section {
   background: linear-gradient(180deg, var(--surface) 0%, rgba(10, 10, 26, 0.8) 100%);
