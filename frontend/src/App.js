@@ -283,6 +283,13 @@ const AISection = () => {
       description: "Market analysis and trading signal AI powered by proprietary algorithms.",
       status: "development",
       buttonText: "Join Waitlist"
+    },
+    {
+      icon: Code,
+      title: "API Access",
+      description: "Programmatic access to AI modules via REST API. Build integrations and custom workflows.",
+      status: "development",
+      buttonText: "View Documentation"
     }
   ];
 
@@ -297,7 +304,7 @@ const AISection = () => {
             Each module serves a distinct purpose with clear boundaries.
           </p>
         </motion.div>
-        <div className="ai-grid">
+        <div className="ai-grid ai-grid-5">
           {modules.map((module, i) => (
             <Card key={module.title} {...module} delay={i * 0.1} />
           ))}
