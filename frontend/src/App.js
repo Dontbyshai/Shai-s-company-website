@@ -22,24 +22,62 @@ import {
 } from 'lucide-react';
 import './App.css';
 
-// Logo SVG Component
-const Logo = ({ className = '' }) => (
-  <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="50" cy="50" rx="12" ry="14" fill="#6B7C93" stroke="#6B7C93" strokeWidth="2"/>
-    <ellipse cx="50" cy="50" rx="6" ry="8" fill="#00B8D4"/>
-    {/* Spokes */}
-    <line x1="50" y1="36" x2="50" y2="12" stroke="#6B7C93" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="50" cy="10" r="6" fill="none" stroke="#6B7C93" strokeWidth="3"/>
-    <line x1="50" y1="64" x2="50" y2="88" stroke="#6B7C93" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="50" cy="90" r="6" fill="none" stroke="#6B7C93" strokeWidth="3"/>
-    <line x1="38" y1="43" x2="20" y2="25" stroke="#6B7C93" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="17" cy="22" r="6" fill="none" stroke="#6B7C93" strokeWidth="3"/>
-    <line x1="62" y1="43" x2="80" y2="25" stroke="#6B7C93" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="83" cy="22" r="6" fill="none" stroke="#6B7C93" strokeWidth="3"/>
-    <line x1="38" y1="57" x2="20" y2="75" stroke="#6B7C93" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="17" cy="78" r="6" fill="none" stroke="#6B7C93" strokeWidth="3"/>
-    <line x1="62" y1="57" x2="80" y2="75" stroke="#6B7C93" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="83" cy="78" r="6" fill="none" stroke="#6B7C93" strokeWidth="3"/>
+// Logo SVG Component - Faithful to original design
+const Logo = ({ className = '', style = {} }) => (
+  <svg className={className} style={style} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Center ellipse with gradient */}
+    <defs>
+      <linearGradient id="centerGradient" x1="50" y1="36" x2="50" y2="64" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stopColor="#8BA3B8"/>
+        <stop offset="100%" stopColor="#5A7085"/>
+      </linearGradient>
+      <linearGradient id="coreGradient" x1="50" y1="42" x2="50" y2="58" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stopColor="#00E5FF"/>
+        <stop offset="100%" stopColor="#00B8D4"/>
+      </linearGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+        <feMerge>
+          <feMergeNode in="coloredBlur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+    
+    {/* Main center body */}
+    <ellipse cx="50" cy="50" rx="11" ry="13" fill="url(#centerGradient)"/>
+    {/* Inner cyan core */}
+    <ellipse cx="50" cy="50" rx="6" ry="7" fill="url(#coreGradient)" filter="url(#glow)"/>
+    
+    {/* Top spoke */}
+    <line x1="50" y1="37" x2="50" y2="16" stroke="#7B8FA0" strokeWidth="3.5" strokeLinecap="round"/>
+    <ellipse cx="50" cy="12" rx="5" ry="5" fill="none" stroke="#7B8FA0" strokeWidth="2.5"/>
+    <circle cx="50" cy="12" r="2" fill="#7B8FA0" opacity="0.5"/>
+    
+    {/* Bottom spoke */}
+    <line x1="50" y1="63" x2="50" y2="84" stroke="#7B8FA0" strokeWidth="3.5" strokeLinecap="round"/>
+    <ellipse cx="50" cy="88" rx="5" ry="5" fill="none" stroke="#7B8FA0" strokeWidth="2.5"/>
+    <circle cx="50" cy="88" r="2" fill="#7B8FA0" opacity="0.5"/>
+    
+    {/* Top-left spoke */}
+    <line x1="40" y1="41" x2="24" y2="25" stroke="#7B8FA0" strokeWidth="3.5" strokeLinecap="round"/>
+    <ellipse cx="20" cy="21" rx="5" ry="5" fill="none" stroke="#7B8FA0" strokeWidth="2.5"/>
+    <circle cx="20" cy="21" r="2" fill="#7B8FA0" opacity="0.5"/>
+    
+    {/* Top-right spoke */}
+    <line x1="60" y1="41" x2="76" y2="25" stroke="#7B8FA0" strokeWidth="3.5" strokeLinecap="round"/>
+    <ellipse cx="80" cy="21" rx="5" ry="5" fill="none" stroke="#7B8FA0" strokeWidth="2.5"/>
+    <circle cx="80" cy="21" r="2" fill="#7B8FA0" opacity="0.5"/>
+    
+    {/* Bottom-left spoke */}
+    <line x1="40" y1="59" x2="24" y2="75" stroke="#7B8FA0" strokeWidth="3.5" strokeLinecap="round"/>
+    <ellipse cx="20" cy="79" rx="5" ry="5" fill="none" stroke="#7B8FA0" strokeWidth="2.5"/>
+    <circle cx="20" cy="79" r="2" fill="#7B8FA0" opacity="0.5"/>
+    
+    {/* Bottom-right spoke */}
+    <line x1="60" y1="59" x2="76" y2="75" stroke="#7B8FA0" strokeWidth="3.5" strokeLinecap="round"/>
+    <ellipse cx="80" cy="79" rx="5" ry="5" fill="none" stroke="#7B8FA0" strokeWidth="2.5"/>
+    <circle cx="80" cy="79" r="2" fill="#7B8FA0" opacity="0.5"/>
   </svg>
 );
 
