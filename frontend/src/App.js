@@ -159,6 +159,10 @@ const Card = ({ icon: Icon, title, description, status, buttonText, href, delay 
 // Hero Section
 const HeroSection = () => (
   <section className="hero" id="hero" data-testid="hero-section">
+    <div className="stars-container">
+      <div className="stars"></div>
+      <div className="stars-2"></div>
+    </div>
     <div className="hero-glow" />
     <motion.div 
       className="hero-content"
