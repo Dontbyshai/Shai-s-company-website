@@ -386,9 +386,21 @@
 
 /* Music Section */
 .music-section {
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--surface) 0%, rgba(10, 10, 26, 0.8) 100%);
   position: relative;
   overflow: hidden;
+}
+
+.music-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .music-grid {
