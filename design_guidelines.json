@@ -1,0 +1,200 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Syne, sans-serif",
+        "body": "Manrope, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-6xl md:text-8xl font-bold tracking-tighter",
+        "h2": "text-4xl md:text-6xl font-bold tracking-tight",
+        "h3": "text-2xl md:text-4xl font-semibold",
+        "body": "text-base md:text-lg leading-relaxed text-gray-400",
+        "caption": "text-sm font-mono uppercase tracking-widest text-cyan-500"
+      }
+    },
+    "colors": {
+      "theme": "dark",
+      "palette": {
+        "background": "#050505",
+        "surface": "#0A0A0A",
+        "surface_highlight": "#121212",
+        "primary": "#00B8D4",
+        "primary_glow": "rgba(0, 184, 212, 0.5)",
+        "secondary": "#94A3B8",
+        "accent": "#00E5FF",
+        "border": "rgba(255, 255, 255, 0.1)",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#A1A1AA"
+      },
+      "gradients": {
+        "hero_glow": "radial-gradient(circle at center, rgba(0, 184, 212, 0.15) 0%, rgba(5, 5, 5, 0) 70%)",
+        "card_hover": "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%)"
+      }
+    },
+    "layout": {
+      "container": "max-w-7xl mx-auto px-6 md:px-12",
+      "spacing": {
+        "section_gap": "py-24 md:py-32",
+        "element_gap": "gap-8"
+      },
+      "grid": {
+        "bento": "grid grid-cols-1 md:grid-cols-3 gap-6",
+        "features": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+      }
+    },
+    "motion": {
+      "library": "framer-motion",
+      "scroll": "lenis",
+      "animations": {
+        "fade_up": {
+          "initial": { "opacity": 0, "y": 40 },
+          "whileInView": { "opacity": 1, "y": 0 },
+          "transition": { "duration": 0.8, "ease": "easeOut" }
+        },
+        "stagger_container": {
+          "hidden": { "opacity": 0 },
+          "show": {
+            "opacity": 1,
+            "transition": { "staggerChildren": 0.1 }
+          }
+        },
+        "hover_card": {
+          "whileHover": { "y": -5, "borderColor": "rgba(0, 184, 212, 0.5)" }
+        }
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-cyan-500 text-black font-bold px-8 py-3 rounded-full hover:bg-cyan-400 transition-all hover:scale-105",
+        "outline": "border border-white/20 text-white px-8 py-3 rounded-full hover:bg-white/10 transition-all",
+        "ghost": "text-cyan-500 hover:text-cyan-400 font-mono text-sm uppercase tracking-widest"
+      },
+      "cards": {
+        "base": "bg-[#0A0A0A] border border-white/5 rounded-2xl p-8 hover:border-cyan-500/30 transition-colors duration-300 relative overflow-hidden group",
+        "glass": "backdrop-blur-xl bg-black/40 border border-white/10"
+      },
+      "badges": {
+        "active": "bg-green-500/10 text-green-500 border border-green-500/20 px-3 py-1 rounded-full text-xs font-mono uppercase",
+        "development": "bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 px-3 py-1 rounded-full text-xs font-mono uppercase",
+        "experimental": "bg-purple-500/10 text-purple-500 border border-purple-500/20 px-3 py-1 rounded-full text-xs font-mono uppercase"
+      }
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": {
+        "url": "https://images.unsplash.com/photo-1641897037078-e91a4afcce94?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Abstract futuristic ball of lights",
+        "usage": "Hero section background or central visual element with low opacity"
+      },
+      "music_studio": {
+        "url": "https://images.unsplash.com/photo-1763771757355-d2a395b5f8ea?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Music studio on air sign",
+        "usage": "Background for Music Label section"
+      },
+      "ai_abstract": {
+        "url": "https://images.unsplash.com/photo-1664639985362-7eb8309f9e94?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Abstract blue nodes",
+        "usage": "Visual accent for AI Modules section"
+      },
+      "crypto_chart": {
+        "url": "https://images.unsplash.com/photo-1720962158937-7ea890052166?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Futuristic trading interface",
+        "usage": "Background or card image for Crypto Ecosystem"
+      }
+    },
+    "icons": "lucide-react"
+  },
+  "page_structure": [
+    {
+      "section": "Hero",
+      "type": "Full Screen",
+      "elements": [
+        "Animated Title: 'shaï's company'",
+        "Subtitle: 'Centralizing the Future'",
+        "Scroll Indicator"
+      ]
+    },
+    {
+      "section": "Music Label",
+      "type": "Split Layout",
+      "elements": [
+        "Image: Music Studio",
+        "Content: 'Sonic Innovation'",
+        "CTA: 'Listen Now' (Redirect)"
+      ]
+    },
+    {
+      "section": "AI Modules",
+      "type": "Bento Grid",
+      "elements": [
+        "Card 1: Student AI (Active)",
+        "Card 2: Discussion AI (Dev)",
+        "Card 3: No-Limit AI (Exp)",
+        "Card 4: Trading AI (Dev)"
+      ]
+    },
+    {
+      "section": "Education (NotiaNote)",
+      "type": "Feature Highlight",
+      "elements": [
+        "Minimalist Note UI Mockup",
+        "Value Prop: 'Knowledge Organized'"
+      ]
+    },
+    {
+      "section": "Crypto Ecosystem",
+      "type": "Card Grid",
+      "elements": [
+        "Hexyra Wallet",
+        "Portfolio Tracker",
+        "Crypto Formation",
+        "TradingView Indicator"
+      ]
+    },
+    {
+      "section": "Transparency",
+      "type": "Text Block",
+      "elements": [
+        "Philosophy Statement",
+        "Glassmorphism Container"
+      ]
+    },
+    {
+      "section": "Footer",
+      "type": "Simple",
+      "elements": [
+        "Email: dontbyshai@gmail.com",
+        "Social Links",
+        "Copyright"
+      ]
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Use 'lenis' for smooth scrolling. It is mandatory for the high-end feel.",
+    "Implement a custom cursor (small circle that expands on hover) if possible.",
+    "Use the 'Syne' font for all headings. Import it from Google Fonts.",
+    "Ensure all 'Redirect' buttons open in a new tab.",
+    "The 'Status Badges' in the AI section are critical. Use the specific colors defined in the design system.",
+    "Do not use solid backgrounds for cards; use the 'base' card style with subtle borders.",
+    "For the 'Transparency' section, use a glassmorphism effect.",
+    "Ensure the 'Cyan' accent is used sparingly - only for buttons, active states, and key highlights. Do not overuse it.",
+    "Use 'framer-motion' for all entrance animations. Stagger the grid items."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN"
+  ]
+}
