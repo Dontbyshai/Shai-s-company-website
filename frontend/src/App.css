@@ -21,13 +21,118 @@
   overflow: hidden;
 }
 
+/* Starfield background */
+.stars-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.stars {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    /* Layer 1 - Small stars */
+    100px 50px 0 0 rgba(255,255,255,0.8),
+    200px 150px 0 0 rgba(255,255,255,0.6),
+    300px 80px 0 0 rgba(255,255,255,0.7),
+    450px 200px 0 0 rgba(255,255,255,0.5),
+    550px 100px 0 0 rgba(255,255,255,0.9),
+    700px 250px 0 0 rgba(255,255,255,0.6),
+    800px 50px 0 0 rgba(255,255,255,0.7),
+    950px 180px 0 0 rgba(255,255,255,0.5),
+    1100px 300px 0 0 rgba(255,255,255,0.8),
+    1250px 120px 0 0 rgba(255,255,255,0.6),
+    1400px 220px 0 0 rgba(255,255,255,0.7),
+    1550px 80px 0 0 rgba(255,255,255,0.5),
+    1700px 280px 0 0 rgba(255,255,255,0.9),
+    1850px 150px 0 0 rgba(255,255,255,0.6),
+    /* Layer 2 */
+    50px 350px 0 0 rgba(255,255,255,0.7),
+    180px 420px 0 0 rgba(255,255,255,0.5),
+    320px 380px 0 0 rgba(255,255,255,0.8),
+    480px 450px 0 0 rgba(255,255,255,0.6),
+    620px 320px 0 0 rgba(255,255,255,0.7),
+    780px 400px 0 0 rgba(255,255,255,0.5),
+    920px 350px 0 0 rgba(255,255,255,0.9),
+    1080px 420px 0 0 rgba(255,255,255,0.6),
+    1220px 380px 0 0 rgba(255,255,255,0.7),
+    1380px 450px 0 0 rgba(255,255,255,0.5),
+    1520px 320px 0 0 rgba(255,255,255,0.8),
+    1680px 400px 0 0 rgba(255,255,255,0.6),
+    /* Layer 3 */
+    80px 550px 0 0 rgba(255,255,255,0.5),
+    240px 620px 0 0 rgba(255,255,255,0.7),
+    400px 580px 0 0 rgba(255,255,255,0.6),
+    560px 650px 0 0 rgba(255,255,255,0.8),
+    720px 520px 0 0 rgba(255,255,255,0.5),
+    880px 600px 0 0 rgba(255,255,255,0.7),
+    1040px 550px 0 0 rgba(255,255,255,0.6),
+    1200px 620px 0 0 rgba(255,255,255,0.8),
+    1360px 580px 0 0 rgba(255,255,255,0.5),
+    1520px 650px 0 0 rgba(255,255,255,0.7),
+    1680px 520px 0 0 rgba(255,255,255,0.6),
+    1840px 600px 0 0 rgba(255,255,255,0.8);
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.stars-2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    150px 100px 0 0 rgba(255,255,255,0.4),
+    350px 200px 0 0 rgba(255,255,255,0.3),
+    500px 50px 0 0 rgba(255,255,255,0.5),
+    650px 300px 0 0 rgba(255,255,255,0.4),
+    850px 150px 0 0 rgba(255,255,255,0.3),
+    1000px 250px 0 0 rgba(255,255,255,0.5),
+    1150px 100px 0 0 rgba(255,255,255,0.4),
+    1350px 350px 0 0 rgba(255,255,255,0.3),
+    1500px 200px 0 0 rgba(255,255,255,0.5),
+    1650px 50px 0 0 rgba(255,255,255,0.4),
+    1800px 300px 0 0 rgba(255,255,255,0.3),
+    100px 450px 0 0 rgba(255,255,255,0.5),
+    280px 500px 0 0 rgba(255,255,255,0.4),
+    420px 550px 0 0 rgba(255,255,255,0.3),
+    600px 480px 0 0 rgba(255,255,255,0.5),
+    750px 530px 0 0 rgba(255,255,255,0.4),
+    900px 490px 0 0 rgba(255,255,255,0.3),
+    1100px 540px 0 0 rgba(255,255,255,0.5),
+    1280px 500px 0 0 rgba(255,255,255,0.4),
+    1450px 550px 0 0 rgba(255,255,255,0.3),
+    1600px 480px 0 0 rgba(255,255,255,0.5),
+    1780px 530px 0 0 rgba(255,255,255,0.4);
+  animation: twinkle 6s ease-in-out infinite reverse;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
 .hero-glow {
   position: absolute;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle at center, rgba(0, 184, 212, 0.12) 0%, rgba(5, 5, 5, 0) 70%);
+  width: 900px;
+  height: 900px;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(0, 184, 212, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
+  animation: nebulaPulse 8s ease-in-out infinite;
+}
+
+@keyframes nebulaPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
 }
 
 .hero-content {
