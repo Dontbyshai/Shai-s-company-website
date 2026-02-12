@@ -1,0 +1,17 @@
+-e 
+# Environment files
+*.env
+*.env.*
+node_modules/
+dist/
+build/
+.DS_Store
+__pycache__/
+*.pyc
+coverage/
+.vscode/
+.idea/
+.gitconfig
+test_reports/
+.emergent/
+.npm-local/
