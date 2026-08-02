@@ -1,0 +1,48 @@
+# Environment files
+*.env
+*.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.npm-local/
+
+# Production
+build/
+dist/
+dist.tar.gz
+
+# Testing
+coverage/
+test_reports/
+
+# Misc
+.DS_Store
+__pycache__/
+*.pyc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sensitive Files
+deploy.exp
+vps_map.md
+shaiscompany.nginx
+*.pem
+*.key
+.gitconfig
+
+# Editor directories and files
+.vscode/
+.idea/
+.emergent/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

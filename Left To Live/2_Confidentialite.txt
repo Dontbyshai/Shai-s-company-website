@@ -1,0 +1,26 @@
+Politique de Confidentialité de l'application "Left To Live"
+
+Dernière mise à jour : Août 2026
+
+L'application "Left To Live" (ci-après "l'Application") prend votre vie privée très au sérieux. Cette politique de confidentialité explique quelles données nous collectons, comment elles sont utilisées, et comment elles sont protégées.
+
+1. COLLECTE DES DONNÉES DE SANTÉ (HEALTHKIT)
+L'Application utilise l'API HealthKit d'Apple pour lire certaines de vos données de santé (telles que la fréquence cardiaque au repos, le poids, la taille, l'âge, etc.).
+Ces données sont indispensables au fonctionnement principal de l'Application : l'estimation algorithmique de votre espérance de vie.
+
+2. UTILISATION ET NON-VENTE DES DONNÉES DE SANTÉ
+- Vos données de santé lues depuis HealthKit sont utilisées UNIQUEMENT dans le but de calculer les statistiques au sein de l'Application.
+- VOS DONNÉES DE SANTÉ NE SONT JAMAIS VENDUES, LOUÉES, OU PARTAGÉES À DES TIERS.
+- Vos données de santé ne sont en aucun cas utilisées à des fins publicitaires ou de marketing.
+
+3. STOCKAGE CLOUD ET COMPTE UTILISATEUR
+Pour vous permettre de synchroniser votre profil (notamment pour le mode "Couple" et le "Testament Numérique"), l'Application utilise les services sécurisés de Google Firebase. Les informations liées à votre compte (adresse email, identifiant) et vos données d'application sont stockées de manière chiffrée sur nos serveurs. Seules les personnes que vous autorisez explicitement (ex: votre partenaire) peuvent y avoir accès.
+
+4. SÉCURITÉ DE VOTRE TESTAMENT NUMÉRIQUE
+L'accès à votre "Testament Numérique" dans l'Application est protégé par la biométrie de votre appareil (Face ID ou Touch ID). Les données de ce testament ne sont déverrouillées que par vous-même, ou transmises à vos contacts d'urgence selon la logique interne de l'Application.
+
+5. DROIT À L'OUBLI ET SUPPRESSION DES DONNÉES
+Vous possédez un contrôle total sur vos données. À tout moment, vous pouvez demander la suppression intégrale de votre compte et de toutes les données associées depuis les paramètres de l'Application, ou en nous contactant directement. Une fois supprimées, vos données sont effacées définitivement de nos serveurs Firebase.
+
+6. CONTACT
+Pour toute question concernant cette politique de confidentialité ou vos données personnelles, veuillez nous contacter à l'adresse suivante : [INSERER TON ADRESSE EMAIL ICI]
